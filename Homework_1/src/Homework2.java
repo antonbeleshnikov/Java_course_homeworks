@@ -1,44 +1,44 @@
 public class Homework2 {
     public static void main(String[] args) {
-        System.out.println(SumCheck(5, 6));
-        System.out.println(SumCheck(13, 7));
-        System.out.println(SumCheck(32, 21));
-        System.out.println(NumberCheck(15));
-        System.out.println(NumberCheck(-23));
-        System.out.println(NumberCheck2(15));
-        System.out.println(NumberCheck2(-23));
-        LineOutput(5, "hello");
-        System.out.println(YearCheck(4444));
-        System.out.println(YearCheck(3333));
-        System.out.println(YearCheck(2000));
-        System.out.println(YearCheck(1800));
+        System.out.println(sumCheck(5, 6));
+        System.out.println(sumCheck(13, 7));
+        System.out.println(sumCheck(32, 21));
+        numberCheck(15);
+        numberCheck(-23);
+        System.out.println(numberCheck2(15));
+        System.out.println(numberCheck2(-23));
+        lineOutput(5, "hello");
+        System.out.println(yearCheck(4444));
+        System.out.println(yearCheck(3333));
+        System.out.println(yearCheck(2000));
+        System.out.println(yearCheck(1800));
     }
 
-    public static boolean SumCheck(int a, int b) {
+    public static boolean sumCheck(int a, int b) {
         if ((a + b) >= 10 && (a + b) <= 20) {
             return true;
         } else return false;
     }
 
-    public static String NumberCheck(int a) {
+    public static void numberCheck(int a) {
         if (a >= 0) {
-            return "Число положительное";
-        } else return "Число отрицательное";
+            System.out.println("Число положительное");
+        } else System.out.println("Число отрицательное");
     }
 
-    public static boolean NumberCheck2(int a) {
+    public static boolean numberCheck2(int a) {
         if (a < 0) {
             return true;
         } else return false;
     }
 
-    public static void LineOutput(int quantity, String line) {
+    public static void lineOutput(int quantity, String line) {
         for (int i = 0; i < quantity; i++) {
             System.out.println(line);
         }
     }
 
-    public static boolean YearCheck(int year) {
+    public static boolean yearCheck(int year) {
         if (year % 4 != 0) {
             return false;
         } else if (year % 100 == 0 && year % 400 != 0) {
