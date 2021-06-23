@@ -95,8 +95,8 @@ public class Homework3 {
         System.out.println();
     }
 
+    public static Random random = new Random();
     public static int getMin() {
-        Random random = new Random();
         int[] arr = new int[10];
         for (int i = 0; i < arr.length; i++) {
             arr[i] = random.nextInt(50);
@@ -111,9 +111,7 @@ public class Homework3 {
         }
         return min;
     }
-
     public static int getMax() {
-        Random random = new Random();
         int[] arr = new int[10];
         for (int i = 0; i < arr.length; i++) {
             arr[i] = random.nextInt(50);
