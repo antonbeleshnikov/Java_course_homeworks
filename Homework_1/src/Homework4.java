@@ -88,14 +88,13 @@ public class Homework4 {
      * далее проверяет, может ли выиграть игрок на следующий ход, и, если да, то блокирует выигрышную клетку,
      * если в обоих предыдущих случаях нет, то ходит рандомно, что забавно,
      * выиграть у такого АИ все равно можно за счёт вилки
-     * */
+     */
     public static void aiTurn() {
         int x, y;
         if (aiCheckPotentialWin(DOT_O) != null) {
             y = aiCheckPotentialWin(DOT_O)[0];
             x = aiCheckPotentialWin(DOT_O)[1];
-        }
-        else if (aiCheckPotentialWin(DOT_X) != null) {
+        } else if (aiCheckPotentialWin(DOT_X) != null) {
             y = aiCheckPotentialWin(DOT_X)[0];
             x = aiCheckPotentialWin(DOT_X)[1];
         } else {
@@ -120,7 +119,7 @@ public class Homework4 {
                 if (i + DOTS_TO_WIN <= SIZE) {
                     int count = 0;
                     for (int k = 0; k < DOTS_TO_WIN; k++) {
-                        if (map[j][i+k] == symb) {
+                        if (map[j][i + k] == symb) {
                             count++;
                         }
                     }
@@ -130,7 +129,7 @@ public class Homework4 {
                 if (j + DOTS_TO_WIN <= SIZE) {
                     int count = 0;
                     for (int k = 0; k < DOTS_TO_WIN; k++) {
-                        if (map[j+k][i] == symb) {
+                        if (map[j + k][i] == symb) {
                             count++;
                         }
                     }
@@ -168,13 +167,13 @@ public class Homework4 {
                 if (i + DOTS_TO_WIN <= SIZE) {
                     int count = 0;
                     for (int k = 0; k < DOTS_TO_WIN; k++) {
-                        if (map[j][i+k] == symb) {
+                        if (map[j][i + k] == symb) {
                             count++;
                         }
                     }
                     if (count == DOTS_TO_WIN - 1) {
                         for (int k = 0; k < DOTS_TO_WIN; k++) {
-                            if (map[j][i+k] == DOT_EMPTY) {
+                            if (map[j][i + k] == DOT_EMPTY) {
                                 int[] coordinates = new int[2];
                                 coordinates[0] = j;
                                 coordinates[1] = i + k;
@@ -187,15 +186,15 @@ public class Homework4 {
                 if (j + DOTS_TO_WIN <= SIZE) {
                     int count = 0;
                     for (int k = 0; k < DOTS_TO_WIN; k++) {
-                        if (map[j+k][i] == symb) {
+                        if (map[j + k][i] == symb) {
                             count++;
                         }
                     }
                     if (count == DOTS_TO_WIN - 1) {
                         for (int k = 0; k < DOTS_TO_WIN; k++) {
-                            if (map[j+k][i] == DOT_EMPTY) {
+                            if (map[j + k][i] == DOT_EMPTY) {
                                 int[] coordinates = new int[2];
-                                coordinates[0] = j+k;
+                                coordinates[0] = j + k;
                                 coordinates[1] = i;
                                 return coordinates;
                             }
