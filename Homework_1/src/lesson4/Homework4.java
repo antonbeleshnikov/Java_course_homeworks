@@ -1,10 +1,12 @@
+package lesson4;
+
 import java.util.Random;
 import java.util.Scanner;
 
 public class Homework4 {
     public static char[][] map;
-    public static final int SIZE = 5;
-    public static final int DOTS_TO_WIN = 4;
+    public static final int SIZE = 3;
+    public static final int DOTS_TO_WIN = 3;
     public static final char DOT_EMPTY = '•';
     public static final char DOT_X = 'X';
     public static final char DOT_O = 'O';
